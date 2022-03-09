@@ -8,17 +8,17 @@
     <title>Document</title>
     <style>
         .dd-Finance-main1 {
-	    width:98.9%;
+            width: 98.9%;
             border: 1px solid #50CDE6;
-	    //border: 1px solid #8faadc;
+            //border: 1px solid #8faadc;
             text-align: center;
             border-radius: 4px;
             //background-color: #8faadc; 
-	    background-color: #50CDE6;
+            background-color: #50CDE6;
             color: #fff;
             font-size: 13px;
             font-weight: bold;
-	     padding:1px;
+            padding: 1px;
         }
 
         .dd-Finance-main2 {
@@ -36,11 +36,11 @@
             border: 1px solid #ccc;
             border-radius: 6px;
             background-color: #fff;
-	    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
             width: 50%;
-	    font-weight:bold;
-	    height:145px;
-	
+            font-weight: bold;
+            height: 145px;
+
         }
 
         .gcd-revenue-head {
@@ -49,10 +49,54 @@
             border: 1px solid #ccc;
             border-radius: 6px;
             background-color: #fff;
-	    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
             width: 48%;
-	    font-weight:bold;
+            font-weight: bold;
         }
+
+        .sections-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .v-seperator {
+            width: 2px;
+            background-color: blue;
+            margin: 8px 16px;
+            height: 80%;
+        }
+        .yoy-value-wrapper {
+            display: flex;
+            align-items: center;
+        }
+        .yoy-title {
+            margin-bottom: 10px;
+        }
+        .arrow-down {
+            width: 0; 
+            height: 0; 
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid #ccc;
+        }
+        .arrow-up {
+            width: 0; 
+            height: 0; 
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid #ccc;
+        }
+        .yoy-percent {
+            margin-left: 8px;
+            border: 2px solid #ccc;
+            border-radius: 25px;
+            padding: 2px 8px;
+        }
+        .marginTop15 {
+            margin-top: 15px;
+        }
+        .marginTop10 {
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -60,9 +104,40 @@
 <body>
     <div class="dd-Finance-main1">DD-Finance</div>
     <div class="dd-Finance-main2">
-        <div class="cls-revenue-head">CLS Revenue</div>
+        <div class="sections-wrapper cls-revenue-head">
+            <div class="sec1">
+                <div class="value-wrapper">
+                    <div class="value-heading">
+                        CLS Revenue (MTD)
+                    </div>
+                    <div class="value marginTop10">
+                        $61.7M
+                    </div>
+                </div>
+                <div class="value-wrapper marginTop15">
+                    <div class="value-heading">
+                        CLS Revenue (YTD)
+                    </div>
+                    <div class="value marginTop10">
+                        $61.7M
+                    </div>
+                </div>
+            </div>
+            <div class="v-seperator">
+                &nbsp;
+            </div>
+            <div class="sec2">
+                <div class="yoy-title">
+                    YoY Change
+                </div>
+                <div class="yoy-value-wrapper">
+                    <div class="indicator arrow-down"></div>
+                    <div class="yoy-percent">4.4%</div>
+                </div>
+            </div>
+        </div>
         <div class="gcd-revenue-head">GCD Revenue</div>
-	<div class="gcd-revenue-head">Place Holder</div>
+        <div class="gcd-revenue-head">Place Holder</div>
     </div>
 
 
