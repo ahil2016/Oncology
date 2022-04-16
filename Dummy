@@ -1,1 +1,16 @@
 https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/demo-4/dashboard/ecommerce
+        .nav-title {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+        }
+        .nav-title .icon{
+            padding-right: 20px;
+        }
+        .vertical-accordion-wrapper:hover .nav-title .icon {
+            padding-right: 15px;
+        }
+        .nav-title svg {
+            height: 20px;
+            width: 20px;
+        }
