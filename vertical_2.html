@@ -33,6 +33,13 @@
         margin: 0px 15px;
     }
 
+    .accordion-item:first-child, .vertical-accordion-wrapper:hover .accordion-item-wrapper:first-child {
+        margin-top: 20px;
+    }
+    .accordion-item {
+        margin-bottom: 7px;
+    }
+
     .accordion-item-title {
         display: flex;
         align-items: center;
@@ -121,7 +128,7 @@
         padding-left: 58px;
     }
 
-    .accordion-item-child-list ul li.active {
+    .accordion-item-child-list ul li.active, .accordion-item-title.active {
         background: linear-gradient(118deg, #7367f0, rgba(115, 103, 240, .7));
         box-shadow: 0 0 10px 1px rgba(115, 103, 240, .7);
         border-radius: 4px;
@@ -193,7 +200,7 @@
         </div>
 
         <div class="accordion-item accordion-item-wrapper">
-            <div class="accordion-item-title collapsed">
+            <div class="accordion-item-title collapsed active">
                 <div class="icon">
                     <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" id="Layer_2" viewBox="0 0 32 32">
                         <defs>
