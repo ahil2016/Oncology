@@ -1,0 +1,457 @@
+<!-- Navigation Link -->
+
+
+<div id="sf-home-navlink" class="display-none">
+<SpotfireControl id="27523800aa284a93b4ac2c1abcd19cbe" /> <!-- Home Link -->
+</div>  
+
+<div id="sf-clsn-navlink" class="display-none">
+<SpotfireControl id="832f66391dc1422fbf5ec8bfe00cc625" /> <!-- CLS Link -->
+</div> 
+
+<div id="sf-gcdn-navlink" class="display-none">
+<SpotfireControl id="1bc061aed4524e4c832c46e82d5d82c4" /> <!-- GCD Link -->
+</div> 
+
+<div id="sf-cdxoncon-navlink" class="display-none">
+<SpotfireControl id="1dd60c6cd1524f5e873ded4758d8b36b" /> <!-- CDx Revenue Link -->
+</div>
+
+<div id="sf-otherTestn-navlink" class="display-none">
+<SpotfireControl id="0ff390d6d2404d688a8c4562088aff62" /> <!-- OtherTest Link -->
+</div>
+
+<div id="sf-oncoOtherTestn-navlink" class="display-none">
+<SpotfireControl id="0ff390d6d2404d688a8c4562088aff62" /> <!-- Oncology-Other Test Link -->
+</div>
+
+<div id="sf-ominiseqIntellrigenn-navlink" class="display-none">
+<SpotfireControl id="ed4f96a840f1427781023b13e6a6b937" /> <!-- Omniseq and Intelligen Link -->
+</div>
+
+<div id="sf-OncoDxn-navlink" class="display-none">
+<SpotfireControl id="13a5ba70994d4b8fbd302bc8ec444bc9" /> <!-- Oncology Diagnostics Link -->
+</div>
+
+<div id="sf-intelligenMyloidn-navlink" class="display-none">
+<SpotfireControl id="220c4ee084d349d999dee1dae75866f6" /> <!-- Intelligen Myeloid Link -->
+</div>
+<!-- Navigation Link -->
+
+<div id="sf-ominiseqRevenuen-navlink" class="display-none">
+<SpotfireControl id="8526a84f92084031bfd834a8593a3352" /> <!-- Omniseq Revenue Link -->
+</div>
+
+<div id="sf-oncoDirectRevenuen-navlink" class="display-none">
+<SpotfireControl id="4aa8f577307b4cbdb36079221c359664" /> <!-- Oncology Direct Revenue Link -->
+</div>
+
+<div id="sf-headCountn-navlink" class="display-none">
+<SpotfireControl id="e5287398ab2440baa7380d429db3dfcd" /> <!-- Head Count Link -->
+</div>
+
+<div id="sf-exitsn-navlink" class="display-none">
+<SpotfireControl id="2eff00f06fa14f0f963ed7c445fbd884" /> <!-- Exits Link -->
+</div>
+
+<div id="sf-turnovern-navlink" class="display-none">
+<SpotfireControl id="53222e1420944209bd9ea3fb63a59e94" /> <!-- Turnover (Voluntary) Link -->
+</div>
+
+<div id="sf-managerRation-navlink" class="display-none">
+<SpotfireControl id="73f7903556764b27a83e81bfd5bd5657" /> <!-- Manager Ratio Link -->
+</div>
+
+<div id="sf-internalExternaln-navlink" class="display-none">
+<SpotfireControl id="7c5901b331074cfd84c0062e5f52a30b" /> <!-- Internal External Link -->
+</div>
+
+<div id="sf-thoughtLeadershipn-navlink" class="display-none">
+<SpotfireControl id="5c64bb0bbb5747ebbbf53447cc9d054e" /> <!-- Thought Leadership Link -->
+</div>
+
+<!-- Navigation Link -->
+
+<style>
+
+	.display-none{
+		display:none;
+	}
+
+    body {
+        margin: 0px;
+        background-color: grey;
+    }
+
+    .vertical-accordion-wrapper {
+        background: #fff;
+        display: inline-block;
+        width: 50px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: 650px;
+        position: fixed;
+        top: 78px;
+        left: 0;
+        z-index: 1;
+        border: 1px solid #8faadc;
+        transition: 0.2s all ease;
+    }
+
+    .vertical-accordion-wrapper:hover {
+
+        width: 240px;
+
+    }
+
+    .accordion-item-wrapper {
+        margin: 0px 0px;
+    }
+
+    .vertical-accordion-wrapper:hover .accordion-item-wrapper {
+        margin: 0px 15px;
+    }
+
+    .accordion-item:first-child, .vertical-accordion-wrapper:hover .accordion-item-wrapper:first-child {
+        margin-top: 20px;
+    }
+    .accordion-item {
+        margin-bottom: 7px;
+    }
+
+    .accordion-item-title {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        transition: 0.15s all ease;
+        padding: 10px 16px;
+    }
+
+    .vertical-accordion-wrapper:hover .accordion-item-title {
+
+        padding: 10px 15px;
+    }
+
+    .accordion-item-title:hover {
+        padding-left: 20px;
+    }
+
+    .accordion-item-title .icon,
+    .accordion-item-title .text {
+        display: flex;
+    }
+
+    .accordion-item-title .icon {
+        margin-right: 15px;
+    }
+
+    .accordion-item-title .text {
+        line-height: 20px;
+    }
+
+    .accordion-item-title .icon svg {
+        height: 20px;
+        width: 20px;
+    }
+
+    .accordion-item-title .arrow-icon {
+        display: flex;
+        width: 20px;
+        height: 20px;
+        margin-left: auto;
+        transition: 0.5s all ease;
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236e6b7b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-right'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E");
+    }
+
+    .accordion-item-title.collapsed .arrow-icon {
+        transform: rotate(0deg);
+    }
+
+    .accordion-item-title.expanded .arrow-icon {
+        transform: rotate(90deg);
+    }
+
+    .accordion-item-child-list {
+        transition: max-height 0.15s cubic-bezier(0, 1, 0, 1);
+    }
+
+    .accordion-item-title.collapsed+.accordion-item-child-list {
+        max-height: 0px;
+        overflow: hidden;
+    }
+
+    .accordion-item-title.expanded+.accordion-item-child-list {
+        max-height: 150000px;
+        transition: max-height 0.15s ease-in-out;
+    }
+
+    .accordion-item-title.expanded {
+        background: #f5f5f5;
+        border-radius: 4px;
+    }
+
+    .accordion-item-child-list ul {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .accordion-item-child-list ul li {
+        list-style-type: none;
+        padding: 10px 2px;
+        cursor: pointer;
+        transition: 0.2s all ease;
+        padding-left: 52px;
+    }
+
+    .accordion-item-child-list ul li:hover {
+        padding-left: 58px;
+    }
+
+    .accordion-item-child-list ul li.active, .accordion-item-title.active {
+        background: linear-gradient(118deg, #7367f0, rgba(115, 103, 240, .7));
+        box-shadow: 0 0 10px 1px rgba(115, 103, 240, .7);
+        border-radius: 4px;
+        color: #fff;
+    }
+
+    .accordion-item-child-list ul li:first-of-type {
+        margin-top: 7px !important;
+    }
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #ccc; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ccc; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #4a4a4a; 
+}
+	.sub-title{
+		font-weight: bold;
+	}
+	
+</style>
+
+<body>
+    <div id="vertical-accordion-wrapper" class="vertical-accordion-wrapper">
+
+<!-- Navigation Section Start -->
+        <div class="accordion-item accordion-item-wrapper">
+            <div class="accordion-item-title">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 32 32" id="Filled_Line" version="1.1" viewBox="0 0 32 32" xml:space="preserve"><circle cx="5" cy="6" fill="none" id="XMLID_528_" r="1" stroke="#B83B5E" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/><circle cx="5" cy="16" fill="none" id="XMLID_441_" r="1" stroke="#F08A5D" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/><circle cx="5" cy="26" fill="none" id="XMLID_442_" r="1" stroke="#F9ED69" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/><line fill="none" id="XMLID_443_" stroke="#200F60" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" x1="10" x2="28" y1="6" y2="6"/><line fill="none" id="XMLID_444_" stroke="#200F60" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" x1="10" x2="28" y1="16" y2="16"/><line fill="none" id="XMLID_445_" stroke="#200F60" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" x1="10" x2="28" y1="26" y2="26"/></svg>
+                </div>
+                <div class="text">
+                    Navigation
+                </div>
+            </div>
+        </div>
+<!-- Navigation Section END -->
+
+<!-- Navigation Section Start -->
+
+        <div class="accordion-item accordion-item-wrapper">
+            <div class="accordion-item-title active">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" id="Layer_2" viewBox="0 0 32 32">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: #fff;
+                                }
+                            </style>
+                        </defs>
+                        <title></title>
+                        <path class="cls-1" fill="#fff"
+                            d="M30,15a1,1,0,0,1-.58-.19L16,5.23,2.58,14.81a1,1,0,0,1-1.16-1.62l14-10a1,1,0,0,1,1.16,0l14,10A1,1,0,0,1,30,15Z">
+                        </path>
+                        <path class="cls-1" fill="#fff"
+                            d="M5,9A1,1,0,0,1,4,8V4A1,1,0,0,1,5,3H9A1,1,0,0,1,9,5H6V8A1,1,0,0,1,5,9Z"></path>
+                        <path class="cls-1" fill="#fff"
+                            d="M25,29H20a1,1,0,0,1-1-1V21H13v7a1,1,0,0,1-1,1H7a3,3,0,0,1-3-3V16a1,1,0,0,1,2,0V26a1,1,0,0,0,1,1h4V20a1,1,0,0,1,1-1h8a1,1,0,0,1,1,1v7h4a1,1,0,0,0,1-1V16a1,1,0,0,1,2,0V26A3,3,0,0,1,25,29Z">
+                        </path>
+                    </svg>
+                </div>
+                <div id="home-navlink" class="text">
+                    Home
+                </div>
+            </div>
+        </div>
+<!-- Navigation Section END -->
+
+<!-- Accordian Navigation Section Start -->
+        <div class="accordion-item accordion-item-wrapper">
+            <div class="accordion-item-title collapsed">
+                <div class="icon">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="enable-background:new 0 0 24 24;" version="1.1" viewBox="0 0 24 24" xml:space="preserve"><g id="info"/><g fill="#4a4a4a" id="icons"><g id="dashboard"><path d="M5,18H3c-1.1,0-2,0.9-2,2c0,1.1,0.9,2,2,2h2c1.1,0,2-0.9,2-2C7,18.9,6.1,18,5,18z"/><path fill="#4a4a4a" d="M13,16h-2c-1.1,0-2,0.9-2,2v2c0,1.1,0.9,2,2,2h2c1.1,0,2-0.9,2-2v-2C15,16.9,14.1,16,13,16z"/><path fill="#4a4a4a" d="M21,12h-2c-1.1,0-2,0.9-2,2v6c0,1.1,0.9,2,2,2h2c1.1,0,2-0.9,2-2v-6C23,12.9,22.1,12,21,12z"/><path fill="#4a4a4a" d="M22,2h-6.6c-0.9,0-1.3,1.1-0.7,1.7l1.9,1.9C12.9,9.8,7.6,13,2,13c-0.6,0-1,0.4-1,1c0,0.6,0.4,1,1,1    c6.7,0,12.9-1.9,17.4-6.6l1.8,1.8c0.6,0.6,1.7,0.2,1.7-0.7V3C23,2.4,22.6,2,22,2z"/></g></g></svg>
+                </div>
+                <div class="text sub-title">
+                    DD Finance
+                </div>
+                <div class="arrow-icon"></div>
+            </div>
+            <div class="accordion-item-child-list">
+                <ul>
+                    <li id="clsn-navlink">CLS Revenue</li>
+                    <li id="gcdn-navlink">GCD Revenue</li>
+                    <li id="cdxoncon-navlink">CDx Revenue</li>
+                    
+                </ul>
+            </div>
+        </div>
+<!-- Accordian Navigation Section END -->
+
+<!-- Accordian Navigation Section Start -->
+        <div class="accordion-item accordion-item-wrapper">
+            <div class="accordion-item-title collapsed">
+                <div class="icon">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><title/><g id="Icons"><path fill="#4a4a4a" d="M13,22a5,5,0,0,0,5-5V15A5,5,0,0,0,8,15v2A5,5,0,0,0,13,22Z" style="fill:#4a4a4a"/><path fill="#4a4a4a" d="M13,58H11V50H23a1,1,0,0,0,0-2H19.81A2.778,2.778,0,0,0,20,47V31a3.009,3.009,0,0,0-3-3H3a3.009,3.009,0,0,0-3,3V47a3.009,3.009,0,0,0,3,3H9v8H7a1,1,0,0,0,0,2h6a1,1,0,0,0,0-2Z" style="fill:#4a4a4a"/><path fill="#4a4a4a" d="M16,51v8a1,1,0,0,0,1,1h5V51H16Z" style="fill:#4a4a4a"/><path fill="#4a4a4a" d="M28,45V59a1,1,0,0,1-1,1H23V51a2,2,0,0,0,0-4H21V31a4,4,0,0,0-4-4H4.29A9.049,9.049,0,0,1,11,24h4a9.014,9.014,0,0,1,9,9v9h1A3.009,3.009,0,0,1,28,45Z" style="fill:#4a4a4a"/><path d="M56,42V53a3.009,3.009,0,0,1-3,3H30V45a4.941,4.941,0,0,0-1-3Z" style="fill:#4a4a4a"/><path fill="#4a4a4a" d="M58,35v4a1,1,0,0,1-1,1H26V34H57A1,1,0,0,1,58,35Z" style="fill:#4a4a4a"/><path d="M44,11v2a5,5,0,0,1-10,0V11a5,5,0,0,1,10,0Z" style="fill:#4a4a4a"/><path fill="#4a4a4a" d="M50,29v4H28V29a9.014,9.014,0,0,1,9-9h4a9.01,9.01,0,0,1,7.48,4,9.124,9.124,0,0,1,1,2A8.8,8.8,0,0,1,50,29Z" style="fill:#4a4a4a"/><path fill="#4a4a4a" d="M64,9v6a1,1,0,0,1-1,1H60v3a1,1,0,0,1-1,1H53a1,1,0,0,1-1-1V16H49a1,1,0,0,1-1-1V9a1,1,0,0,1,1-1h3V5a1,1,0,0,1,1-1h6a1,1,0,0,1,1,1V8h3A1,1,0,0,1,64,9Z" style="fill:#4a4a4a"/><path fill="#4a4a4a" d="M54,27v7H51V29a9.563,9.563,0,0,0-.58-3.33A10.431,10.431,0,0,0,49.65,24H51A3.009,3.009,0,0,1,54,27Z" style="fill:#4a4a4a"/></g></svg>
+                </div>
+                <div class="text sub-title">
+                    Other Test
+                </div>
+                <div class="arrow-icon"></div>
+            </div>
+            <div class="accordion-item-child-list">
+                <ul>
+                    <li id="otherTestn-navlink">Oncology-Other Test</li>
+                    
+                </ul>
+            </div>
+        </div>
+<!-- Accordian Navigation Section END -->
+
+<!-- Accordian Navigation Section Start -->
+        <div class="accordion-item accordion-item-wrapper">
+            <div class="accordion-item-title collapsed">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="32px" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve"><g  fill="#4a4a4a" id="_x36_70_x2C__Analysis_x2C__chemistry_x2C__flask_x2C__research_x2C__test"><g><path d="M109.454,399.021l0.47,0.756l0.156,0.262    c4.543,7.413,9.92,14.252,16.028,20.334c6.735,6.761,14.384,12.634,22.71,17.438l0.156,0.104l0.915,0.522    c15.271,8.482,32.891,13.443,51.842,13.938h0.208h0.235h1.174h1.358h0.077l1.253-0.026h0.131l1.227-0.024l0.183-0.026l1.149-0.053    h0.26l1.384-0.079l0.992-0.077l0.417-0.026l0.914-0.079l0.469-0.026l0.835-0.077l0.522-0.053l0.809-0.079l0.574-0.077l0.235-0.026    l2.376-0.313h0.13l0.575-0.077l0.783-0.132l0.156-0.026l1.149-0.183h0.077l1.306-0.235l0.391-0.077l0.967-0.183l0.313-0.053    l1.018-0.208l0.262-0.053l1.07-0.209l0.183-0.053l1.149-0.26l1.305-0.314h0.078l1.253-0.312l0,0l1.305-0.367l1.174-0.313    l0.105-0.026c18.169-5.169,34.379-14.904,47.352-27.879c6.5-6.474,12.164-13.782,16.863-21.717l0.548-0.914l0.131-0.236    l0.651-1.146l0.394-0.732l0.233-0.418l0.366-0.652l0.26-0.521c0.394-0.758,0.784-1.514,1.176-2.297l0.026-0.053l0.183-0.391    l0.391-0.811l0.392-0.809l0.183-0.393l0.105-0.182l0.443-1.018l0.052-0.105l0.496-1.096v-0.025l0.497-1.123l0.026-0.08    l0.443-1.043l0.077-0.184l0.392-0.965l0.105-0.287l0.339-0.861l0.131-0.365l0.286-0.757l0.183-0.496l0.235-0.679l0.235-0.601    l0.183-0.548l0.234-0.705l0.156-0.471l0.288-0.809l0.105-0.365l0.286-0.914l0.078-0.262l0.313-1.018l0.053-0.183l0.339-1.174    l0.341-1.202v-0.024l0.313-1.176l0.053-0.13l0.262-1.07l0.285-1.227l0.079-0.34l0.209-0.861l0.026-0.131l0.234-1.096l0.104-0.574    l0.133-0.652l0.051-0.184l0.184-1.07l0.156-0.782l0.079-0.444l0.024-0.156l0.185-1.07l0.155-1.02l0.027-0.232l0.182-1.123v-0.131    l0.184-1.229v-0.025l0.156-1.277v-0.08l0.131-1.174h-14.096c-14.148,0.078-18.848,0.104-35.503-4.777    c-16.678-4.906-28.556-2.219-41.373,0.679c-4.62,1.044-9.372,2.114-14.513,2.897v39.678c0,1.645-1.436,2.977-3.211,2.977    c-1.75,0-3.185-1.332-3.185-2.977v-38.894c-2.532,0.233-5.168,0.364-7.935,0.392c-12.531,0.104-20.752-3.003-28.506-5.926    l-0.104-0.053c-9.164-3.471-17.646-6.709-32.526-3.133l-0.077,0.026c-5.796,1.515-9.79,3.027-13.287,4.333    c-6.682,2.506-11.72,4.385-23.024,4.725C96.56,370.776,101.701,385.84,109.454,399.021 M289.412,275.76    c-14.802-18.873-35.709-32.787-59.725-38.711c-1.541-0.235-2.714-1.567-2.714-3.186v-124.33h-47.222v124.33    c-0.026,1.463-0.992,2.768-2.453,3.106c-24.146,5.926-45.134,19.839-59.986,38.79c-14.54,18.559-23.207,41.947-23.207,67.372    c0,1.646,0.026,3.29,0.105,4.908c10.467-0.261,15.113-2.009,21.248-4.306c3.68-1.385,7.856-2.95,13.94-4.543l0.233-0.078    c16.812-4.02,26.183-0.443,36.258,3.393l0.183,0.053c7.179,2.74,14.828,5.613,26.104,5.534c2.793-0.026,5.429-0.183,7.988-0.444    V128.014c0-1.645,1.435-2.977,3.185-2.977c1.776,0,3.211,1.332,3.211,2.977v218.8c4.594-0.731,8.902-1.724,13.129-2.662    c13.627-3.107,26.313-5.952,44.56-0.602c15.793,4.673,20.23,4.646,33.674,4.569l14.591-0.053c0.078-1.645,0.105-3.288,0.105-4.935    C312.619,317.707,303.952,294.318,289.412,275.76z M405.312,365.164V247.907h-72.019v114.882c2.792,0.835,5.43,1.853,8.117,2.871    l0.262,0.104v-93.659c0-1.776,1.436-3.211,3.21-3.211c1.775,0,3.211,1.435,3.211,3.211v95.957    c5.456,1.826,11.616,3.236,19.604,3.184c10.493-0.104,19.186-2.061,27.486-3.94C398.577,366.547,401.894,365.791,405.312,365.164z     M405.312,416.379v-44.715c-2.87,0.548-5.768,1.201-8.718,1.88c-8.613,1.932-17.646,3.993-28.844,4.072    c-7.988,0.077-14.201-1.149-19.657-2.819v42.34c0,1.774-1.436,3.211-3.211,3.211c-1.774,0-3.21-1.437-3.21-3.211v-44.533    l-2.531-0.965c-1.985-0.757-3.917-1.488-5.848-2.142v46.882c0,9.816,3.994,18.769,10.414,25.269l0.156,0.158    c6.526,6.525,15.533,10.57,25.427,10.57c9.892,0,18.899-4.045,25.425-10.57C401.24,435.279,405.312,426.272,405.312,416.379z     M134.645,469.579c-1.75,0-3.211-1.437-3.211-3.211c0-1.775,1.462-3.211,3.211-3.211H345.64c1.749,0,3.212,1.436,3.212,3.211    c0,1.774-1.463,3.211-3.212,3.211H134.645z M258.191,485.999c-1.774,0-3.209-1.438-3.209-3.212c0-1.749,1.435-3.211,3.209-3.211    H404.19c1.774,0,3.209,1.462,3.209,3.211c0,1.774-1.435,3.212-3.209,3.212H258.191z M419.121,485.999    c-1.775,0-3.211-1.438-3.211-3.212c0-1.749,1.436-3.211,3.211-3.211h18.246c1.776,0,3.212,1.462,3.212,3.211    c0,1.774-1.436,3.212-3.212,3.212H419.121z M112.665,485.685c-1.776,0-3.211-1.436-3.211-3.185c0-1.774,1.436-3.212,3.211-3.212    h69.174c1.75,0,3.211,1.438,3.211,3.212c0,1.749-1.462,3.185-3.211,3.185H112.665z M77.817,331.727    c0,1.773-1.437,3.209-3.185,3.209c-1.775,0-3.211-1.436-3.211-3.209c0-26.889,9.188-51.66,24.589-71.291    c15.219-19.42,36.52-33.855,61.057-40.433v-45.524c0-1.776,1.435-3.212,3.211-3.212c1.774,0,3.211,1.436,3.211,3.212v48.004    c-0.026,1.436-1.02,2.768-2.481,3.105c-24.119,5.9-45.106,19.84-59.96,38.765C86.509,282.912,77.817,306.302,77.817,331.727z     M330.003,241.512h0.079h78.44h0.079h3.732v-12.451h-38.346l-0.131-128.953c0-7.281-2.846-13.913-7.387-18.716    c-4.621-4.854-10.99-7.882-17.986-7.882c-6.994,0-13.364,3.027-17.959,7.882c-4.568,4.803-7.413,11.435-7.413,18.716v3.813v0.157    v49.909c0,5.586-2.167,10.65-5.612,14.305c-3.445,3.629-8.172,5.873-13.339,5.873c-5.194,0-9.92-2.244-13.34-5.873    c-3.471-3.654-5.639-8.719-5.639-14.305v-49.832v-0.077v-0.079V70.689c0-12.242-4.75-23.415-12.425-31.506    c-7.7-8.145-18.351-13.182-30.071-13.182c-11.72,0-22.396,5.037-30.097,13.182c-7.674,8.091-12.425,19.236-12.425,31.506v19.969    h-32.447v12.452h8.746h0.077h53.645h0.077h8.746V90.658H206.56V70.689c0-10.572,4.097-20.151,10.676-27.095    c6.526-6.892,15.531-11.173,25.451-11.173c9.894,0,18.898,4.281,25.425,11.173c6.578,6.943,10.651,16.522,10.651,27.095v33.309    v0.079v0.077v49.832c0,7.258,2.844,13.913,7.412,18.716c4.596,4.855,10.963,7.884,17.986,7.884c6.996,0,13.366-3.028,17.96-7.884    c4.567-4.803,7.412-11.458,7.412-18.716v-3.813v-0.155v-49.911c0-5.585,2.141-10.648,5.613-14.305    c3.444-3.627,8.17-5.873,13.338-5.873c5.195,0,9.92,2.246,13.34,5.873c3.471,3.656,5.611,8.72,5.611,14.305l0.131,128.953h-41.296    v12.451H330.003z" style="fill-rule:evenodd;clip-rule:evenodd;"/></g></g><g id="Layer_1"/></svg>
+                </div>
+                <div class="text sub-title">
+                    Flagship Test
+                </div>
+                <div class="arrow-icon"></div>
+            </div>
+            <div class="accordion-item-child-list">
+                <ul>
+                    <li id="ominiseqIntellrigenn-navlink">Omniseq and Intelligen</li>
+                    <li id="OncoDxn-navlink">Oncology Diagnostics</li>
+                    <li id="intelligenMyloidn-navlink">Intelligen Myeloid</li>
+                    <li id="ominiseqRevenuen-navlink">Omniseq Revenue</li>
+		    <li id="oncoDirectRevenuen-navlink">Oncology Direct Revenue</li>
+                </ul>
+            </div>
+        </div>
+<!-- Accordian Navigation Section END -->
+
+<!-- Accordian Navigation Section Start -->
+        <div class="accordion-item accordion-item-wrapper">
+            <div class="accordion-item-title collapsed">
+                <div class="icon">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Icons_Users" overflow="hidden" version="1.1" viewBox="0 0 96 96"><g><circle fill="#4a4a4a" cx="24" cy="30.8" r="9"></circle><circle fill="#4a4a4a" cx="72" cy="30.8" r="9"></circle><path fill="#4a4a4a" d=" M 66 74.2 L 66 65.2 C 66 63.8 65.4 62.4 64.2 61.6 C 61.8 59.6 58.6 58.2 55.4 57.4 C 53.2 56.8 50.6 56.2 48 56.2 C 45.6 56.2 43 56.6 40.6 57.4 C 37.4 58.2 34.4 59.8 31.8 61.6 C 30.6 62.6 30 63.8 30 65.2 L 30 74.2 L 66 74.2 Z"></path><circle fill="#4a4a4a" cx="48" cy="44.8" r="9"></circle><path fill="#4a4a4a" d=" M 88.2 47.6 C 85.8 45.6 82.6 44.2 79.4 43.4 C 77.2 42.8 74.6 42.2 72 42.2 C 69.6 42.2 67 42.6 64.6 43.4 C 63.4 43.8 62.2 44.2 61 44.8 L 61 45 C 61 48.4 59.6 51.6 57.4 53.8 C 61.2 55 64.2 56.6 66.6 58.4 C 67.2 59 67.8 59.4 68.2 60.2 L 90 60.2 L 90 51.2 C 90 49.8 89.4 48.4 88.2 47.6 Z"></path><path fill="#4a4a4a" d=" M 29.4 58.4 L 29.4 58.4 C 32.2 56.4 35.4 54.8 38.6 53.8 C 36.4 51.4 35 48.4 35 45 C 35 44.8 35 44.8 35 44.6 C 33.8 44.2 32.6 43.6 31.4 43.4 C 29.2 42.8 26.6 42.2 24 42.2 C 21.6 42.2 19 42.6 16.6 43.4 C 13.4 44.4 10.4 45.8 7.8 47.6 C 6.6 48.4 6 49.8 6 51.2 L 6 60.2 L 27.6 60.2 C 28.2 59.4 28.6 59 29.4 58.4 Z"></path></g></svg>
+                </div>
+                <div class="text sub-title">
+                    HR Metrics
+                </div>
+                <div class="arrow-icon"></div>
+            </div>
+            <div class="accordion-item-child-list">
+                <ul>
+                    <li id="headCountn-navlink">Head Count</li>
+                    <li id="exitsn-navlink">Exits</li>
+                    <li id="turnovern-navlink">Turnover (Voluntary) </li>
+                    <li id="managerRation-navlink">Manager Ratio</li>
+                </ul>
+            </div>
+        </div>
+<!-- Accordian Navigation Section END -->
+
+<!-- Accordian Navigation Section Start -->
+        <div class="accordion-item accordion-item-wrapper">
+            <div class="accordion-item-title collapsed">
+                <div class="icon">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="512px" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve"><g id="_x34_07_x2C__audio_x2C__card_x2C__external_x2C__interface_x2C__sound"><g><path fill="#4a4a4a" d="M455.989,159.498c-1.334-1.335-3.19-2.176-5.216-2.176    c-2.053,0-3.905,0.841-5.239,2.176c-1.337,1.336-2.176,3.188-2.176,5.24s0.839,3.906,2.151,5.217    c1.358,1.359,3.211,2.174,5.264,2.174c1.977,0,3.78-0.766,5.093-2.026l0.123-0.147c1.333-1.336,2.176-3.189,2.176-5.217    C458.165,162.687,457.322,160.834,455.989,159.498 M455.989,195.094c-1.334-1.336-3.19-2.176-5.216-2.176    c-2.053,0-3.905,0.84-5.239,2.176c-1.337,1.334-2.176,3.188-2.176,5.239s0.839,3.906,2.151,5.216    c1.358,1.359,3.211,2.176,5.264,2.176c1.977,0,3.78-0.767,5.093-2.027l0.123-0.148c1.333-1.334,2.176-3.188,2.176-5.216    C458.165,198.281,457.322,196.428,455.989,195.094z M450.773,115.672c3.706,0,7.093,1.508,9.515,3.931    c2.449,2.446,3.955,5.808,3.955,9.542c0,3.707-1.506,7.093-3.955,9.516l-0.221,0.197c-2.422,2.324-5.71,3.758-9.294,3.758    c-3.709,0-7.071-1.508-9.518-3.955s-3.955-5.809-3.955-9.516c0-3.709,1.509-7.096,3.931-9.542    C443.678,117.18,447.04,115.672,450.773,115.672z M450.773,151.267c3.706,0,7.093,1.508,9.515,3.931    c2.449,2.447,3.955,5.809,3.955,9.541c0,3.707-1.506,7.094-3.955,9.518l-0.221,0.197c-2.422,2.323-5.71,3.757-9.294,3.757    c-3.709,0-7.071-1.508-9.518-3.954c-2.446-2.447-3.955-5.811-3.955-9.518c0-3.708,1.509-7.094,3.931-9.541    C443.678,152.774,447.04,151.267,450.773,151.267z M450.773,186.861c3.706,0,7.093,1.508,9.515,3.932    c2.449,2.445,3.955,5.808,3.955,9.54c0,3.708-1.506,7.095-3.955,9.519l-0.221,0.195c-2.422,2.324-5.71,3.758-9.294,3.758    c-3.709,0-7.071-1.508-9.518-3.953c-2.446-2.449-3.955-5.811-3.955-9.519s1.509-7.095,3.931-9.516    C443.678,188.369,447.04,186.861,450.773,186.861z M418.687,90.879v225.535h64.171V90.879h-16.831h-0.077H418.687z     M163.317,268.434h27.044c1.681,0,3.039,1.359,3.039,3.041v27.066c0,1.656-1.358,3.016-3.039,3.016h-27.044    c-1.681,0-3.039-1.359-3.039-3.016v-27.066C160.278,269.793,161.637,268.434,163.317,268.434z M211.472,268.434h27.065    c1.681,0,3.043,1.359,3.043,3.041v27.066c0,1.656-1.362,3.016-3.043,3.016h-27.065c-1.657,0-3.043-1.359-3.043-3.016v-27.066    C208.429,269.793,209.815,268.434,211.472,268.434z M187.319,274.516H166.36V295.5h20.959V274.516z M235.498,274.516h-20.987    V295.5h20.987V274.516z M140.379,84.798h275.194h47.337v-27.61H123.495v112.297h13.845V87.839    C137.34,86.158,138.698,84.798,140.379,84.798z M254.603,436.967h-14.631c-1.681,0-3.043-1.36-3.043-3.041    c0-1.682,1.362-3.04,3.043-3.04h14.631v-7.268c0-1.681,1.362-3.041,3.042-3.041h12.111v-4.498c0-1.682,1.358-3.04,3.039-3.04    h46.72c1.68,0,3.042,1.358,3.042,3.04v14.807h123.025c9.466,0,18.067-3.733,24.297-9.74c6.18-6.007,10.037-14.263,10.037-23.333    c0-9.072-3.857-17.354-10.037-23.336c-6.229-6.006-14.831-9.739-24.297-9.739H281.647h-39.033h-0.074H78.633    c-11.069,0-21.18-4.399-28.497-11.469c-7.353-7.095-11.911-16.907-11.911-27.685s4.559-20.592,11.911-27.686    c7.317-7.069,17.428-11.469,28.497-11.469h64.786V172.6V90.879h269.189v225.535H143.419V292.51H78.633    c-9.461,0-18.063,3.732-24.292,9.739c-6.205,5.981-10.048,14.263-10.048,23.335s3.843,17.353,10.048,23.334    c6.229,6.007,14.831,9.739,24.292,9.739h163.908h0.074h39.033h163.936c11.072,0,21.159,4.399,28.501,11.47    c7.342,7.094,11.915,16.907,11.915,27.686c0,10.776-4.573,20.591-11.915,27.684c-7.342,7.069-17.429,11.471-28.501,11.471H322.558    v14.807c0,1.681-1.362,3.04-3.042,3.04h-46.72c-1.681,0-3.039-1.359-3.039-3.04v-4.5h-12.111c-1.681,0-3.042-1.359-3.042-3.041    V436.967z M78.458,345.334c1.681,0,3.042,1.359,3.042,3.041c0,1.681-1.361,3.039-3.042,3.039c-7.296,0-13.947-2.892-18.766-7.563    c-4.857-4.672-7.875-11.147-7.875-18.267s3.018-13.596,7.875-18.292c4.819-4.647,11.469-7.54,18.766-7.54h34.112    c1.681,0,3.042,1.359,3.042,3.041s-1.361,3.04-3.042,3.04H78.458c-5.686,0-10.844,2.224-14.564,5.834    c-3.696,3.56-5.994,8.503-5.994,13.917c0,5.413,2.298,10.356,5.994,13.916C67.614,343.109,72.772,345.334,78.458,345.334z     M64.438,389.063c-1.667,0-3.029-1.36-3.029-3.041c0-1.682,1.362-3.041,3.029-3.041h208.039c1.682,0,3.04,1.359,3.04,3.041    c0,1.681-1.358,3.041-3.04,3.041H64.438z M186.259,401.717c-1.681,0-3.043-1.359-3.043-3.04s1.362-3.04,3.043-3.04h143.959    c1.682,0,3.043,1.359,3.043,3.04s-1.361,3.04-3.043,3.04H186.259z M344.951,401.717c-1.681,0-3.039-1.359-3.039-3.04    s1.358-3.04,3.039-3.04h17.998c1.68,0,3.039,1.359,3.039,3.04s-1.359,3.04-3.039,3.04H344.951z M29.041,401.322    c-1.67,0-3.039-1.359-3.039-3.041c0-1.656,1.369-3.041,3.039-3.041h95.42c1.681,0,3.039,1.385,3.039,3.041    c0,1.682-1.358,3.041-3.039,3.041H29.041z M455.989,123.903c-1.334-1.335-3.19-2.175-5.216-2.175c-2.053,0-3.905,0.84-5.239,2.175    c-1.337,1.335-2.176,3.188-2.176,5.241c0,2.051,0.839,3.904,2.151,5.215c1.358,1.359,3.211,2.175,5.264,2.175    c1.977,0,3.78-0.765,5.093-2.026l0.123-0.148c1.333-1.335,2.176-3.189,2.176-5.215    C458.165,127.092,457.322,125.238,455.989,123.903z" style="fill-rule:evenodd;clip-rule:evenodd;"/></g></g><g id="Layer_1"/></svg>
+                </div>
+                <div class="text sub-title">
+                    Internal/External
+                </div>
+                <div class="arrow-icon"></div>
+            </div>
+            <div class="accordion-item-child-list">
+                <ul>
+                    <li id="internalExternaln-navlink">Internal/External</li>
+                    
+                </ul>
+            </div>
+        </div>
+<!-- Accordian Navigation Section END -->
+
+<!-- Accordian Navigation Section Start -->
+        <div class="accordion-item accordion-item-wrapper">
+            <div class="accordion-item-title collapsed">
+                <div class="icon">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" height="24" id="svg8" version="1.1" viewBox="0 0 24 24" width="24"><defs id="defs2"><rect height="7.0346723" id="rect2504" width="7.9207187" x="-1.1008456" y="289.81766"/></defs><g id="g2111" style="stroke-width:0.956082" transform="matrix(1.0459139,0,0,1.045958,-0.5509673,-0.54909117)"><path fill="#4a4a4a" d="m -67.951172,-26.626953 c -1.504935,0 -2.734374,1.230724 -2.734375,2.736328 0,0.837434 0.387563,1.580795 0.984375,2.083984 -0.787148,0.31867 -1.468286,0.845415 -1.978516,1.517579 -0.212196,-0.169546 -0.439246,-0.317708 -0.683593,-0.433594 0.356628,-0.37021 0.580078,-0.864892 0.580078,-1.414063 0,-1.141817 -0.952071,-2.068359 -2.101563,-2.068359 -1.149491,0 -2.105468,0.926542 -2.105468,2.068359 0,0.552112 0.227394,1.049121 0.58789,1.419922 -1.017818,0.483582 -1.779429,1.427053 -1.951172,2.589844 l -0.08594,0.574219 H -58.4668 l -0.08398,-0.574219 c -0.17167,-1.162299 -0.932002,-2.106071 -1.949219,-2.589844 0.359489,-0.370712 0.585938,-0.868258 0.585938,-1.419922 0,-1.141817 -0.954024,-2.068359 -2.103516,-2.068359 -1.149492,0 -2.103516,0.926542 -2.103516,2.068359 0,0.548723 0.223473,1.043945 0.580078,1.414063 -0.244991,0.116116 -0.472861,0.2636 -0.685546,0.433594 -0.509827,-0.67107 -1.188597,-1.199013 -1.97461,-1.517579 0.596812,-0.503189 0.986329,-1.24655 0.986328,-2.083984 0,-1.505604 -1.231393,-2.736329 -2.736329,-2.736328 z m -5.933594,3.423828 c 0.621385,0 1.103516,0.47765 1.103516,1.066406 0,0.588757 -0.482131,1.066406 -1.103516,1.066407 -0.621384,0 -1.103515,-0.477651 -1.103515,-1.066407 0,-0.588755 0.482131,-1.066406 1.103515,-1.066406 z m 11.867188,0 c 0.621385,0 1.103516,0.477651 1.103516,1.066406 0,0.588756 -0.482131,1.066406 -1.103516,1.066407 -0.621385,0 -1.101563,-0.47765 -1.101563,-1.066407 0,-0.588756 0.480178,-1.066406 1.101563,-1.066406 z m -5.933594,2.050781 c 1.60498,5.56e-4 2.838499,1.118265 3.337891,2.591797 h -6.677735 c 0.499908,-1.473702 1.734435,-2.592138 3.339844,-2.591797 z" id="path1315" style="color:#4a4a4a;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#4a4a4a;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#4a4a4a;solid-opacity:1;vector-effect:none;fill:#4a4a4a;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#4a4a4a;stop-opacity:1" transform="matrix(0.95610164,0,0,0.95606133,77.014912,38.766484)"/><path fill="#4a4a4a" d="m -78.632812,-38.445312 v 7.947265 h 8.375 l 2.251953,2.746094 2.330078,-2.746094 h 8.308593 v -7.947265 z m 3.341796,2.359374 h 14.582032 v 1.070313 h -14.582032 z m 0,2.085938 h 10.714844 v 1.072266 h -10.714844 z" id="path1943" style="color:#4a4a4a;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#4a4a4a;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#4a4a4a;solid-opacity:1;vector-effect:none;fill:#4a4a4a;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#4a4a4a;stop-opacity:1" transform="matrix(0.95610164,0,0,0.95606133,77.014912,38.766484)"/></g></svg>
+                </div>
+                <div class="text sub-title">
+                    Though Leadership
+                </div>
+                <div class="arrow-icon"></div>
+            </div>
+            <div class="accordion-item-child-list">
+                <ul>
+                    <li id="thoughtLeadershipn-navlink">Internal/External</li>
+                    
+                </ul>
+            </div>
+        </div>
+<!-- Accordian Navigation Section END -->
+    </div>
+
+    <script>
+        // document.addEventListener("DOMContentLoaded", function () {
+            var titleItems = document.getElementsByClassName('accordion-item-title');
+            for (var i = 0; i < titleItems.length; i++) {
+                titleItems[i].addEventListener('click', function () {
+                    if (this.classList.contains('collapsed')) {
+                        this.classList.remove('collapsed');
+                        this.classList.add('expanded');
+                    } else if (this.classList.contains('expanded')) {
+                        this.classList.remove('expanded');
+                        this.classList.add('collapsed');
+                    } else {
+                        this.classList.remove('collapsed');
+                        this.classList.add('expanded');
+                    }
+                })
+            }
+
+            var leftNav = document.getElementById('vertical-accordion-wrapper');
+            leftNav.addEventListener('mouseleave', function () {
+
+                var titleItems = document.getElementsByClassName('accordion-item-title');
+                for (var i = 0; i < titleItems.length; i++) {
+                    if (!titleItems[i].classList.contains('collapsed')) {
+                        if (titleItems[i].classList.contains('expanded')) {
+                            titleItems[i].classList.remove('expanded');
+                        }
+                        titleItems[i].classList.add('collapsed');
+                    }
+                }
+            })
+       // })
+
+    </script>
+</body>
