@@ -7,13 +7,25 @@
     .vertical-accordion-wrapper {
         background: #fff;
         display: inline-block;
-        width: 240px;
+        width: 50px;
         overflow-x: hidden;
         overflow-y: auto;
         height: 100%;
+	position:fixed;
+	top:28px;
+	left:0;
+	z-index:1;
+    }
+    .vertical-accordion-wrapper:hover {
+     
+        width: 240px;
+        
     }
 
     .accordion-item-wrapper {
+        margin: 0px 0px;
+    }
+    .vertical-accordion-wrapper:hover .accordion-item-wrapper {
         margin: 0px 15px;
     }
 
@@ -155,7 +167,7 @@
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+      //  document.addEventListener("DOMContentLoaded", function () {
             var titleItems = document.getElementsByClassName('accordion-item-title');
             for (var i = 0; i < titleItems.length; i++) {
                 titleItems[i].addEventListener('click', function () {
@@ -171,7 +183,7 @@
                     }
                 })
             }
-        })
+       // })
 
     </script>
 </body>
