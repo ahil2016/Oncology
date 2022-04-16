@@ -16,6 +16,7 @@
         left: 0;
         z-index: 1;
         border: 1px solid #ccc;
+        transition: 0.2s all ease;
     }
 
     .vertical-accordion-wrapper:hover {
@@ -85,7 +86,7 @@
     }
 
     .accordion-item-child-list {
-        transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+        transition: max-height 0.15s cubic-bezier(0, 1, 0, 1);
     }
 
     .accordion-item-title.collapsed+.accordion-item-child-list {
@@ -95,7 +96,7 @@
 
     .accordion-item-title.expanded+.accordion-item-child-list {
         max-height: 150000px;
-        transition: max-height 1s ease-in-out;
+        transition: max-height 0.15s ease-in-out;
     }
 
     .accordion-item-title.expanded {
