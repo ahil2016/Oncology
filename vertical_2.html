@@ -133,7 +133,7 @@
 </style>
 
 <body>
-    <div class="vertical-accordion-wrapper">
+    <div id="vertical-accordion-wrapper" class="vertical-accordion-wrapper">
 
         <div class="accordion-item accordion-item-wrapper">
             <div class="accordion-item-title">
@@ -230,23 +230,37 @@
     </div>
 
     <script>
-        //  document.addEventListener("DOMContentLoaded", function () {
-        var titleItems = document.getElementsByClassName('accordion-item-title');
-        for (var i = 0; i < titleItems.length; i++) {
-            titleItems[i].addEventListener('click', function () {
-                if (this.classList.contains('collapsed')) {
-                    this.classList.remove('collapsed');
-                    this.classList.add('expanded');
-                } else if (this.classList.contains('expanded')) {
-                    this.classList.remove('expanded');
-                    this.classList.add('collapsed');
-                } else {
-                    this.classList.remove('collapsed');
-                    this.classList.add('expanded');
+        document.addEventListener("DOMContentLoaded", function () {
+            var titleItems = document.getElementsByClassName('accordion-item-title');
+            for (var i = 0; i < titleItems.length; i++) {
+                titleItems[i].addEventListener('click', function () {
+                    if (this.classList.contains('collapsed')) {
+                        this.classList.remove('collapsed');
+                        this.classList.add('expanded');
+                    } else if (this.classList.contains('expanded')) {
+                        this.classList.remove('expanded');
+                        this.classList.add('collapsed');
+                    } else {
+                        this.classList.remove('collapsed');
+                        this.classList.add('expanded');
+                    }
+                })
+            }
+
+            var leftNav = document.getElementById('vertical-accordion-wrapper');
+            leftNav.addEventListener('mouseleave', function () {
+
+                var titleItems = document.getElementsByClassName('accordion-item-title');
+                for (var i = 0; i < titleItems.length; i++) {
+                    if (!titleItems[i].classList.contains('collapsed')) {
+                        if (titleItems[i].classList.contains('expanded')) {
+                            titleItems[i].classList.remove('expanded');
+                        }
+                        titleItems[i].classList.add('collapsed');
+                    }
                 }
             })
-        }
-       // })
+        })
 
     </script>
 </body>
