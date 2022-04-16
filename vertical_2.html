@@ -1,0 +1,252 @@
+<style>
+    body {
+        margin: 0px;
+        background-color: grey;
+    }
+
+    .vertical-accordion-wrapper {
+        background: #fff;
+        display: inline-block;
+        width: 50px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: 100%;
+        position: fixed;
+        top: 28px;
+        left: 0;
+        z-index: 1;
+        border: 1px solid #ccc;
+    }
+
+    .vertical-accordion-wrapper:hover {
+
+        width: 240px;
+
+    }
+
+    .accordion-item-wrapper {
+        margin: 0px 0px;
+    }
+
+    .vertical-accordion-wrapper:hover .accordion-item-wrapper {
+        margin: 0px 15px;
+    }
+
+    .accordion-item-title {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        transition: 0.15s all ease;
+        padding: 10px 16px;
+    }
+
+    .vertical-accordion-wrapper:hover .accordion-item-title {
+
+        padding: 10px 15px;
+    }
+
+    .accordion-item-title:hover {
+        padding-left: 20px;
+    }
+
+    .accordion-item-title .icon,
+    .accordion-item-title .text {
+        display: flex;
+    }
+
+    .accordion-item-title .icon {
+        margin-right: 15px;
+    }
+
+    .accordion-item-title .text {
+        line-height: 20px;
+    }
+
+    .accordion-item-title .icon svg {
+        height: 20px;
+        width: 20px;
+    }
+
+    .accordion-item-title .arrow-icon {
+        display: flex;
+        width: 20px;
+        height: 20px;
+        margin-left: auto;
+        transition: 0.5s all ease;
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236e6b7b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-right'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E");
+    }
+
+    .accordion-item-title.collapsed .arrow-icon {
+        transform: rotate(0deg);
+    }
+
+    .accordion-item-title.expanded .arrow-icon {
+        transform: rotate(90deg);
+    }
+
+    .accordion-item-child-list {
+        transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+    }
+
+    .accordion-item-title.collapsed+.accordion-item-child-list {
+        max-height: 0px;
+        overflow: hidden;
+    }
+
+    .accordion-item-title.expanded+.accordion-item-child-list {
+        max-height: 150000px;
+        transition: max-height 1s ease-in-out;
+    }
+
+    .accordion-item-title.expanded {
+        background: #f5f5f5;
+        border-radius: 4px;
+    }
+
+    .accordion-item-child-list ul {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .accordion-item-child-list ul li {
+        list-style-type: none;
+        padding: 10px 2px;
+        cursor: pointer;
+        transition: 0.2s all ease;
+        padding-left: 52px;
+    }
+
+    .accordion-item-child-list ul li:hover {
+        padding-left: 58px;
+    }
+
+    .accordion-item-child-list ul li.active {
+        background: linear-gradient(118deg, #7367f0, rgba(115, 103, 240, .7));
+        box-shadow: 0 0 10px 1px rgba(115, 103, 240, .7);
+        border-radius: 4px;
+        color: #fff;
+    }
+
+    .accordion-item-child-list ul li:first-of-type {
+        margin-top: 7px !important;
+    }
+</style>
+
+<body>
+    <div class="vertical-accordion-wrapper">
+
+        <div class="accordion-item accordion-item-wrapper">
+            <div class="accordion-item-title">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" id="Layer_2" viewBox="0 0 32 32">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: #101820;
+                                }
+                            </style>
+                        </defs>
+                        <title></title>
+                        <path class="cls-1" fill="#4a4a4a"
+                            d="M30,15a1,1,0,0,1-.58-.19L16,5.23,2.58,14.81a1,1,0,0,1-1.16-1.62l14-10a1,1,0,0,1,1.16,0l14,10A1,1,0,0,1,30,15Z">
+                        </path>
+                        <path class="cls-1" fill="#4a4a4a"
+                            d="M5,9A1,1,0,0,1,4,8V4A1,1,0,0,1,5,3H9A1,1,0,0,1,9,5H6V8A1,1,0,0,1,5,9Z"></path>
+                        <path class="cls-1" fill="#4a4a4a"
+                            d="M25,29H20a1,1,0,0,1-1-1V21H13v7a1,1,0,0,1-1,1H7a3,3,0,0,1-3-3V16a1,1,0,0,1,2,0V26a1,1,0,0,0,1,1h4V20a1,1,0,0,1,1-1h8a1,1,0,0,1,1,1v7h4a1,1,0,0,0,1-1V16a1,1,0,0,1,2,0V26A3,3,0,0,1,25,29Z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="text">
+                    Navigation
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item accordion-item-wrapper">
+            <div class="accordion-item-title">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" id="Layer_2" viewBox="0 0 32 32">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: #101820;
+                                }
+                            </style>
+                        </defs>
+                        <title></title>
+                        <path class="cls-1" fill="#4a4a4a"
+                            d="M30,15a1,1,0,0,1-.58-.19L16,5.23,2.58,14.81a1,1,0,0,1-1.16-1.62l14-10a1,1,0,0,1,1.16,0l14,10A1,1,0,0,1,30,15Z">
+                        </path>
+                        <path class="cls-1" fill="#4a4a4a"
+                            d="M5,9A1,1,0,0,1,4,8V4A1,1,0,0,1,5,3H9A1,1,0,0,1,9,5H6V8A1,1,0,0,1,5,9Z"></path>
+                        <path class="cls-1" fill="#4a4a4a"
+                            d="M25,29H20a1,1,0,0,1-1-1V21H13v7a1,1,0,0,1-1,1H7a3,3,0,0,1-3-3V16a1,1,0,0,1,2,0V26a1,1,0,0,0,1,1h4V20a1,1,0,0,1,1-1h8a1,1,0,0,1,1,1v7h4a1,1,0,0,0,1-1V16a1,1,0,0,1,2,0V26A3,3,0,0,1,25,29Z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="text">
+                    Home
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item accordion-item-wrapper">
+            <div class="accordion-item-title collapsed">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" id="Layer_2" viewBox="0 0 32 32">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: #101820;
+                                }
+                            </style>
+                        </defs>
+                        <title></title>
+                        <path class="cls-1" fill="#4a4a4a"
+                            d="M30,15a1,1,0,0,1-.58-.19L16,5.23,2.58,14.81a1,1,0,0,1-1.16-1.62l14-10a1,1,0,0,1,1.16,0l14,10A1,1,0,0,1,30,15Z">
+                        </path>
+                        <path class="cls-1" fill="#4a4a4a"
+                            d="M5,9A1,1,0,0,1,4,8V4A1,1,0,0,1,5,3H9A1,1,0,0,1,9,5H6V8A1,1,0,0,1,5,9Z"></path>
+                        <path class="cls-1" fill="#4a4a4a"
+                            d="M25,29H20a1,1,0,0,1-1-1V21H13v7a1,1,0,0,1-1,1H7a3,3,0,0,1-3-3V16a1,1,0,0,1,2,0V26a1,1,0,0,0,1,1h4V20a1,1,0,0,1,1-1h8a1,1,0,0,1,1,1v7h4a1,1,0,0,0,1-1V16a1,1,0,0,1,2,0V26A3,3,0,0,1,25,29Z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="text">
+                    Invoice
+                </div>
+                <div class="arrow-icon"></div>
+            </div>
+            <div class="accordion-item-child-list">
+                <ul>
+                    <li class="active">List</li>
+                    <li>Preview</li>
+                    <li>Edit</li>
+                    <li>Add</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        //  document.addEventListener("DOMContentLoaded", function () {
+        var titleItems = document.getElementsByClassName('accordion-item-title');
+        for (var i = 0; i < titleItems.length; i++) {
+            titleItems[i].addEventListener('click', function () {
+                if (this.classList.contains('collapsed')) {
+                    this.classList.remove('collapsed');
+                    this.classList.add('expanded');
+                } else if (this.classList.contains('expanded')) {
+                    this.classList.remove('expanded');
+                    this.classList.add('collapsed');
+                } else {
+                    this.classList.remove('collapsed');
+                    this.classList.add('expanded');
+                }
+            })
+        }
+       // })
+
+    </script>
+</body>
