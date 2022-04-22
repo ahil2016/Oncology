@@ -1,0 +1,63 @@
+
+<META http-equiv=X-UA-Compatible content=IE=edge>
+<META name=viewport content="width=device-width, initial-scale=1.0">
+<STYLE>
+        .RegulatorywithoutCritical {
+		height: 40px;
+		width: 225px;
+		text-align: center;
+		display: inline-block;
+		font-size:10px;
+		padding: 0px;
+		border: 3px solid #ccc;
+		#background-color: lightgrey;
+		box-shadow: 0 2px 2px 0 #ccc, 0 2px 2px 0 #ccc;
+        }
+
+
+	.RegulatorywithoutCritical-wrapper {
+		//margin-top: -10px;
+		margin-top: 5px;
+		margin-left: 20px;
+		display: flex;
+		align-items: flex-end;
+		//background-color: #fff;
+	}
+
+
+
+</STYLE>
+
+
+
+<DIV class="RegulatorywithoutCritical-wrapper">
+<DIV id="RegulatorywithoutCriticalblock" class="RegulatorywithoutCritical">
+<BR>
+<DIV id="NotAR" style="float:left; padding-left:30px; font-size:12px; color:grey;  visibility:show;">No Inspections for March 2022</DIV>
+
+<DIV id="RegulatorywithoutCriticalratio" ><SpotfireControl id="f61345620f6f4fb39034a15bfeeee168" /></DIV>
+
+
+</DIV>
+
+
+</DIV></DIV></DIV>
+
+
+<script>
+
+	$("#RegulatorywithoutCriticalratio").on('DOMSubtreeModified',function(e){
+		e.stopPropagation();
+	
+	if(!isNaN(parseFloat($(this).text()))) {
+		alert($(this).text());
+	}
+	else {
+		alert("No Value");
+	}
+	})
+	
+
+</script>
+
+
