@@ -14,3 +14,76 @@ https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/demo-4/dashboard
             height: 20px;
             width: 20px;
         }
+
+*********************************************
+
+$(document).ready(function(){
+
+
+
+$("#RegulatorywithoutCriticalratio").on('DOMSubtreeModified',function(){
+
+
+
+//!isNaN(parseFloat($(this).text()))
+//alert(parseFloat($(this).text()));
+
+
+
+if(!isNaN(parseFloat($(this).text()))) {
+alert(parseFloat($(this).text()));
+
+
+
+$("#NotAR").css("visibility", "hidden");
+$("#NotAR").css("margin-top", "-15px");
+$("#RegulatorywithoutCriticalratio").css("visibility", "show");
+
+
+
+var RegulatorywithoutCriticalratio = parseFloat($(this).text());
+
+
+
+if(RegulatorywithoutCriticalratio >=98) {
+$("#RegulatorywithoutCriticalblock").css("border-color", "#84d9a3");
+}
+
+
+
+else if (RegulatorywithoutCriticalratio < 98 & RegulatorywithoutCriticalratio >=95) {
+
+
+
+}
+
+
+
+else {
+$("#RegulatorywithoutCriticalblock").css("border-color", "#F58D8D");
+}
+
+
+
+}
+
+
+
+
+else {
+
+
+
+$("#NotAR").css("visibility", "show");
+$("#NotAR").css("margin-top", "0px");
+$("#RegulatorywithoutCriticalratio").css("visibility", "hidden");
+
+
+
+}
+
+})
+
+
+
+})
