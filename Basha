@@ -24,7 +24,9 @@
 		//background-color: #fff;
 	}
 
-
+	.display-none{
+		display:none;
+	}
 
 </STYLE>
 
@@ -45,15 +47,30 @@
 
 
 <script>
-
+	
 	$("#RegulatorywithoutCriticalratio").on('DOMSubtreeModified',function(e){
-		e.stopPropagation();
+		//e.stopPropagation();
 	
 	if(!isNaN(parseFloat($(this).text()))) {
-		alert($(this).text());
+		//console.log($(this).text());
+		$('#NotAR').addClass('display-none');
+		$(this).removeClass('display-none');
+		var RegulatorywithoutCriticalratio = parseFloat($(this).text());
+		if(RegulatorywithoutCriticalratio >=98) {
+			$("#RegulatorywithoutCriticalblock").css("border-color", "#84d9a3");
+		 }
+		else if (RegulatorywithoutCriticalratio < 98 & RegulatorywithoutCriticalratio >=95) {
+			$("#RegulatorywithoutCriticalblock").css("border-color", "#fafad2");
+		}
+		else {
+			$("#RegulatorywithoutCriticalblock").css("border-color", "#F58D8D");
+		}
 	}
 	else {
-		alert("No Value");
+		//console.log("No Value");
+		$(this).addClass('display-none');
+		$('#NotAR').removeClass('display-none');
+		$("#RegulatorywithoutCriticalblock").css("border-color", "#ccc");
 	}
 	})
 	
